@@ -14,10 +14,12 @@ export const AddNewItem = (props: AddNewItemProps) => {
   const { onAdd, toggleButtonText, dark } = props;
 
   if (showForm) {
-    <NewItemForm onAdd={text => {
-      onAdd(text);
-      setShowForm(false);
-    }} />
+    return (
+      <NewItemForm onAdd={text => {
+        onAdd(text);
+        setShowForm(false);
+      }} />
+    )
   }
   
   return (
